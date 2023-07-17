@@ -4,8 +4,10 @@
 
 ## Установка и использование через Docker
 
-1. docker build -t script-compress-image .
+1. Соберите Docker образ:
+docker build -t script-compress-image .
 
-2. docker run -v <путь к директории с изображениями на хосте>:/data script-compress-image
+2. Соберите Docker образ:
+docker run -v <путь к директории с изображениями на хосте>:/data script-compress-image
 
 
