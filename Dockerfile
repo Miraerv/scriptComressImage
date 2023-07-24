@@ -1,18 +1,19 @@
-#Базовый образ
-FROM node:20
+# Use an existing Rust image as the base
+FROM rust:latest
 
+# Set the working directory
 WORKDIR /usr/src/app
 
-COPY package*.json ./
-
-RUN npm install
-
+# Copy the application files into the image
 COPY . .
 
+# Build the application in release mode
+RUN cargo build --release
+
 RUN apt-get update && apt-get install -y \
-  ffmpeg \
+  imagemagick \
   pngquant \
-  imagemagick
+  jpegoptim
 
-CMD [ "node", "script.js" ]
-
+# Set the command to run the binary
+CMD ["./target/release/something"]
