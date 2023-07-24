@@ -6,7 +6,7 @@
 
 1. Соберите Docker образ:
 ```bash
-docker build -t script-compress-image .
+docker build -t script-rust .
 ```
 
 
