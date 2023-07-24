@@ -66,6 +66,6 @@ fn compress_directory(directory_path: &Path) -> io::Result<()> {
 }
 
 fn main() -> io::Result<()> { 
-    compress_directory(&PathBuf::from("./"))?; 
+    compress_directory(&PathBuf::from("/data"))?; 
     Ok(()) 
 }
