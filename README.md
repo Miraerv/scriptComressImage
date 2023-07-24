@@ -12,7 +12,7 @@ docker build -t script-compress-image .
 
 2. Соберите Docker образ:
 ```bash
-docker run -v <путь к директории с изображениями на хосте>:/data script-compress-image
+docker run -v <путь к директории с изображениями на хосте>:/data script-rust
 ```
 
 

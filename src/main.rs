@@ -30,7 +30,7 @@ fn compress_file(input_path: &Path) -> io::Result<()> {
         .args(args)
         .output()?;
 
-
+/* 
     if !output.stdout.is_empty() {
         println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
     }
@@ -38,7 +38,7 @@ fn compress_file(input_path: &Path) -> io::Result<()> {
     if !output.stderr.is_empty() {
         eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
     }
-
+*/
     if !output.status.success() {
         println!("{} process exited with code {}", command, output.status);
     } else {
